@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__) #ele fala que esse script que esta rodando é o principal
 
-with open('data/cidades.json', 'r', encoding='utf-8') as f: #aqui eu abro o arquivo de texto e leio ele e dou um apelido de f
+with open('cidades.json', 'r', encoding='utf-8') as f: #aqui eu abro o arquivo de texto e leio ele e dou um apelido de f
     cidades = json.load(f) #aqui coloco na variavel cidades o arquivo de texto
     
 @app.route('/cidades')
