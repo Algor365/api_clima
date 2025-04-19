@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bradesco - Página Exemplo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    header {
+      background-color: #c4001e;
+      color: white;
+      padding: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background-color: #f2f2f2;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: #c4001e;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    .servicos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      background-color: #fff;
+    }
+
+    .card {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 8px;
+      width: 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #c4001e;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #444;
+      font-size: 15px;
+    }
+
+    footer {
+      background-color: #c4001e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .servicos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Bradesco</div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Investimentos</a>
+      <a href="#">Atendimento</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo ao Bradesco</h1>
+    <p>Segurança, inovação e soluções financeiras para você e sua empresa.</p>
+  </section>
+
+  <section class="servicos">
+    <div class="card">
+      <h3>Conta Corrente</h3>
+      <p>Abra sua conta online com facilidade e segurança.</p>
+    </div>
+    <div class="card">
+      <h3>Cartões</h3>
+      <p>Crédito e débito com benefícios exclusivos para você.</p>
+    </div>
+    <div class="card">
+      <h3>Empréstimos</h3>
+      <p>Simule e contrate seu crédito de forma simples e rápida.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Bradesco - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

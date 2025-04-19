@@ -1,4 +1,5 @@
-from flask import Flask, jsonify, request #importo as bibliotecas
+from flask import Flask, jsonify, request, render_template #importo as bibliotecas
+
 import json
 
 app = Flask(__name__) #ele fala que esse script que esta rodando é o principal
@@ -9,7 +10,7 @@ with open('cidades.json', 'r', encoding='utf-8') as f: #aqui eu abro o arquivo d
     
 @app.route('/teste')
 def teste():
-    return 'teste'
+    return render_template('br.html')
 @app.route('/cidades')
 def name_cidade():
     nomes=[x['Cidade'] for x in cidades]
