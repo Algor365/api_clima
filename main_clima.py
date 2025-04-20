@@ -9,9 +9,22 @@ with open('cidades.json', 'r', encoding='utf-8') as f:
 def name_cidade():
     nomes=[x['Cidade'] for x in cidades]
     return jsonify(nomes)
-@app.route('/')#crio uma rota para acessar
+@app.route('/')
 def home():
-    return jsonify({'mensagem': 'api de clima rodando'}), 200 
+    rotas = {
+        "/": "Mostra as rotas disponíveis e suas descrições.",
+        "/cidades": "Retorna uma lista com os nomes de todas as cidades disponíveis.",
+        "/clima": {
+            "descrição": "Filtra as cidades com base em estado, temperatura (quente ou frio) e se tem praia.",
+            "parâmetros (query string)": {
+                "estado": "Nome do estado (ex: SP, RJ, etc.)",
+                "temperatura": '"quente" para cidades com temp. > 25°C ou "frio" para temp. < 25°C',
+                "praia": '"true" ou "false" para filtrar cidades com ou sem praia'
+            },
+            "exemplo": "/clima?estado=SP&temperatura=quente&praia=true"
+        }
+    }
+    return jsonify(rotas), 200
 
 @app.route('/clima', methods=['GET'])
 def clima():
