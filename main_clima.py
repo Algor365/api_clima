@@ -4,9 +4,7 @@ import json
 app = Flask(__name__) 
 with open('cidades.json', 'r', encoding='utf-8') as f: 
     cidades = json.load(f) 
-@app.route('/teste')
-def teste():
-    return render_template('br.html')
+    
 @app.route('/cidades')
 def name_cidade():
     nomes=[x['Cidade'] for x in cidades]
